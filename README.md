@@ -6,9 +6,9 @@ During the summer, I was a part of an Entrepreneurship program where students cr
 
 None that I am aware of.
 
-###Installing
+###Viewing Website
 
-First, download a zip copy of the file. Then, Extract the folder.
+First, download a zip copy of the file. Then, Extract the folder and open index.html with your prefered browser.
 
 ##Built With
 
