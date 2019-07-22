@@ -8,7 +8,7 @@ None that I am aware of.
 
 ###Installing
 
-First, download a copy of the file. Then, Extract the folder.
+First, download a zip copy of the file. Then, Extract the folder.
 
 ##Built With
 
