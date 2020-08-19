@@ -9,62 +9,47 @@
 
 <body>
 	<div id="navbar">
-		<h1 style="color: #ed4337">PIP<img src="images/pip-logo.png" alt="pip-logo" width="50" height="75" align="right"></h1>
-			<a href="#Home">Home</a>
+		<h1 style="color: #ed4337">PIP<a class="nameNavbar" href="#Home"><img src="images/pip-logo.png" alt="pip-logo" width="50" height="75" align="right"></a></h1>
 			<a href="#Staff">Staff</a>
-			<a href="#Timeline">Timeline</a>
-			<a href="#Calander">Calander</a>
 			<a href="#Products">Products</a>
+			<a href="#Calander">Calander</a>
 	</div>
 	
-	<div class="introImage" id="Home">
-		<div class="introText">
-		<h1 style="font-size:50px">"Producing Inventory From the Peculiar"</h1>
-		</div>
+	<div class="main" id="Home">
+	<section class="cd-slider">
+	  <ul>
+		<li data-color="#9F241B">
+		  <div class="content" style="background-image:url(images/anne-preble.jpg)">
+			  <p class="headerText">"Producing Inventory From the Peculiar"</p>
+		  </div>
+		</li>
+		<li data-color="#453B2F">
+		  <div class="content" style="background-image:url(images/problem.jpg)">
+			  <p class="headerText">60 million tons of odd-looking produce is sent to landfills annually in the US.</p>
+		  </div>
+		</li>
+		<li data-color="#726D7B">
+		  <div class="content" style="background-image:url(images/olia-gozha.jpg)">
+			<p class="headerText"> PIP turns peculiar, but edible items into jams, jellies, salsas, and guacamole.</>
+		  </div>
+		</li>
+			<li data-color="#1D382A">
+		  <div class="content" style="background-image:url(images/kylie-lugo.jpg">
+			  <p class="headerText">Sign up for a workshop to can and jam your way to less food waste.</p>
+		  </div>
+		</li>
+	  </ul>
+	  <nav>
+		<div><a class="prev" href="#"></a></div>
+		<div><a class="next" href="#"></a></div>
+	  </nav>
+	</section>	<script src="script.js"></script>
 	</div>
 	
-	<div class="main">
-	<br>
-		<div class="row">
-			<div class="about">
-				<div class="card">
-					<div class="aboutContainer">
-					<h2>Problem</h2>
-					<img class="circleImg" src="images/problem.jpg" alt="landfills"/>
-					<p>60 million tons of produce in the United States is wasted annually mostly due to its appearance. Small bruises, ripening, and scars causes fruit and vegetables to end up in landfills. According to research done by University of Arizona, much food loss occurs in the transit process.</p>
-					</div>
-				</div>
-			</div>
-			<div class="about">
-				<div class="card">
-					<div class="aboutContainer">
-					<h2>Mission</h2>
-					<img class="circleImg" src="images/olia-gozha.jpg" alt="canning and jamming"/>
-					<p>Nogales, Arizona holds the largest border port of entry for fresh produce imports from Mexico: receiving upwards of 6 billion pounds of produce. PIP's goal is to turn the peculiar, but edible items into jams, jellies marmalade, salsa, and guacamole.</p>
-					</div>
-				</div>
-			</div>
-			<div class="about">
-				<div class="card">
-					<div class="aboutContainer">
-					<h2>Solution</h2>
-					<img class="circleImg" src="images/kylie-lugo.jpg" alt="community"/>
-					<p>We engage the community in 3 programs called "Jam Sessions", "Let's Salsa" and "Rock-n-Guac". We supply produce, jars, and equipment. Each participant will be able to take home their own jar of product and the knowledge to prepare their own version to reduce food waste.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	
+	<div class="main" id="Staff">
 	<br>
-	
-	<div class="main" id="Staff">	
-		<div class="ad">
-			<h2><center>PIP, PIP, Pur&eacute;e with us!</center></h2>
-				<center> <a class="button moreinfo" href="#Calander"> Click to find out more </a> </center>
-		</div>
-	<br>
-	<center><h1>Meet the Team</center></h1>
+		<center><h1>Meet the Team</center></h1>
 		<div class="row">
 			<div class="column2">
 				<div class="teamContainer">
@@ -99,42 +84,82 @@
 		</div>
 	<br>
 	</div>
+	
 	<br>
 	
-	<h1 style="color:#787878" id="Timeline"><center>Timeline</center></h1>	
-		<div class="timeline">
-			<div class="timelineContainer left">
-				<div class="timelineContent">
-				<h2>2019</h2>
-				<p>PIP is founded</p>
-			</div>
-		</div>
-		<div class="timelineContainer right">
-			<div class="timelineContent">
-			<h2>2020</h2>
-			<p>PIP breaks ground openning its first center in Tuscon, Arizona and hosts its first community event "Let's Jam." PIP is also distributed to grocery stores.</p>
-		</div>
-		</div>
-		<div class="timelineContainer left">
-			<div class="timelineContent">
-			<h2>2022</h2>
-			<p>Opens second location in Phoenix, Arizona. Inventory now includes dehydrated produce, spices, and powders.</p>
-			</div>
-		</div>
-		<div class="timelineContainer right">
-			<div class="timelineContent">
-			<h2>2024</h2>
-			<p>PIP opens two more locations in Arizona. PIP's online store becomes live.</p>
-			</div>
-		</div>
-		<div class="timelineContainer left">
-			<div class="timelineContent">
-			<h2>2030</h2>
-			<p>PIP expands to another boarder port of entry.</p>
-			</div>
-		</div>
-		</div>
-		
+	<div class="ad">
+		<h2><center>PIP, PIP, Pur&eacute;e with us!</center></h2>
+			<center> <a class="button moreinfo" href="#Calander"> Click to find out more </a> </center>
+	</div>
+	
+	<br>
+	
+	<div class="main" id="Products">
+	<h1 style="color:#787878"><center>Products</center></h1>	
+	<br>
+		<ol class="products">
+			<li class="products__article" style="--animation-order:1">
+				<a class="products__link">
+					<div class="products__content products__content--lhs">
+						<h2><mark>Jams</mark></h2>
+					</div>
+					<div class="products__content products__content--rhs" aria-hidden="true">
+						<h2><mark>Jams</mark></h2>
+					</div>
+				</a>
+			</li>
+			<li class="products__article" style="--animation-order:2">
+				<a class="products__link">
+					<div class="products__content products__content--lhs">
+						<h2><mark>Jellies</mark></h2>
+					</div>
+					<div class="products__content products__content--rhs" aria-hidden="true">
+						<h2><mark>Jellies</mark></h2>
+					</div>
+				</a>
+			</li>
+			<li class="products__article" style="--animation-order:3">
+				<a class="products__link">
+					<div class="products__content products__content--lhs">
+						<h2><mark>Salsas</mark></h2>
+					</div>
+					<div class="products__content products__content--rhs" aria-hidden="true">
+						<h2><mark>Salsas</mark></h2>
+					</div>
+				</a>
+			</li>
+		  <li class="products__article" style="--animation-order:1">
+				<a class="products__link">
+					<div class="products__content products__content--lhs">
+						<h2><mark>Guacamole</mark></h2>
+					</div>
+					<div class="products__content products__content--rhs" aria-hidden="true">
+						<h2><mark>Guacamole</mark></h2>
+					</div>
+				</a>
+			</li>
+			<li class="products__article" style="--animation-order:2">
+				<a class="products__link">
+					<div class="products__content products__content--lhs">
+						<h2><mark>Marmalades</mark></h2>
+					</div>
+					<div class="products__content products__content--rhs" aria-hidden="true">
+						<h2><mark>Marmalades</mark></h2>
+					</div>
+				</a>
+			</li>
+			<li class="products__article" style="--animation-order:3">
+				<a class="products__link">
+					<div class="products__content products__content--lhs">
+						<h2><mark>Workshops</mark></h2>
+					</div>
+					<div class="products__content products__content--rhs" aria-hidden="true">
+						<h2><mark>Workshops</mark></h2>
+					</div>
+				</a>
+			</li>
+		</ol>
+	
 	<br>
 	
 	<div class="main" id="Calander">
@@ -144,40 +169,6 @@
 		</div>
 	</div>
 	<br>
-	<div class="main" id="Products">
-	<h1 style="color:#787878"><center>Products</center></h1>	
-	<div class="row"><center>
-		<div class="product">
-			<div class="card">
-				<div class="productContainer">
-					<img src="images/pip-logo.png" alt="Jams and Jellies" class="productImage">
-					<div class="productOverlay">
-					<div class="productText">Coming Soon</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="product">
-			<div class="card">
-				<div class="productContainer">
-					<img src="images/pip-logo.png" alt="Guacamole" class="productImage">
-					<div class="productOverlay">
-					<div class="productText">Coming Soon</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="product">
-			<div class="card">
-				<div class="productContainer">
-					<img src="images/pip-logo.png" alt="Salsa" class="productImage">
-					<div class="productOverlay">
-					<div class="productText">Coming Soon</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</center></div>
 <br>
 
 	<footer>
@@ -187,32 +178,7 @@
 	</footer>
 	
 <script>
-// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-	window.onscroll = function() {scrollFunction()};
-	function scrollFunction() {
-		if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-			document.getElementById("navbar").style.padding = "5px 40px 20px";
-			document.getElementById("logo").style.fontSize = "25px";
-		}
-		else {
-			document.getElementById("navbar").style.padding = "10px 40px 30px";
-			document.getElementById("logo").style.fontSize = "25px";
-		}
-	}
-//Nav smooth scroll
-	$(document).ready(function(){
-	$("a").on('click', function(event) {
-		if (this.hash !== "") {
-			event.preventDefault();
-			var hash = this.hash;
-			$('html, body').animate({
-				scrollTop: $(hash).offset().top
-				}, 80, function(){
-			window.location.hash = hash;
-				});
-		}
-	});
-	});
+
 </script>
 </body>
 </html>
