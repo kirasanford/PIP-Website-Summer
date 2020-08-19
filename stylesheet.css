@@ -17,16 +17,89 @@
 		font-family: 'Fredoka One', cursive;
 		color: #787878;
 	}
-	.introImage {
-		background-image: url("images/anne-preble.jpg");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-attachment: fixed;
-		height: 100%;
-		position: relative;
+	
+	/* Navigation bar */
+	
+	#navbar {
+		background-color: white;
+		padding: 10px 40px 30px;
+		transition: 0.4s;
+		position: fixed;
+		width: 100%;
+		z-index: 200; 
+		text-align: center;
 	}
-	.introText {
+	#navbar a {
+		float: center;
+		color: #787878;
+		text-align: center;
+		padding: 14px;
+		text-decoration: none;
+		font-size: 20px; 
+		border-radius: 4px;
+	}	
+	#navbar #logo {
+		font-size: 35px;
+		font-weight: bold;
+		transition: 0.4s;
+	}
+	#navbar a:hover {
+		background-color: #ddd;
+		color: #ed4337;
+	}
+	#navbar a.nameNavbar {
+		color: #ed4337;
+		font-family: 'Fredoka One', cursive;
+	}
+	#navbar a.nameNavbar:hover{
+		background-color: transparent;
+	}
+	
+	/* Slides for top of Website */
+	
+	.cd-slider {
+		position: relative;
+		width: 100%;
+		height: 85vh;
+		overflow: hidden;
+	}
+	.cd-slider ul li {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		visibility: hidden;
+		transition: visibility 0s .6s;
+	}
+	.cd-slider ul li::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border-radius: 100%;
+		width: 100%;
+		height: 100%;
+		transform: translate(-50%, -50%);
+		pointer-events: none;
+		transition: border-width .4s .6s;
+	}
+	.content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		mix-blend-mode: lighten;
+		opacity: 0.8;
+		transform: scale(1.2);
+		transition: opacity .4s .6s, transform .4s .6s;
+	}
+	.headerText{
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -34,43 +107,94 @@
 		background-color: #FFFFD5;
 		opacity: 0.8;
 		text-align: center;
-		padding-left: 20px;
-		padding-right: 15px;
+		font-family: 'Fredoka One', cursive;
+		font-size: 60px;
+		padding: 20px;
 	}
-	.about {
-		float: left;
-		width: 33.3%;
-		margin-bottom: 16px;
-		padding: 15px 20px;
+	
+	/* current slide */
+	
+	.cd-slider li.current_slide {
+		visibility: visible;
 	}
-	.aboutContainer {
-		padding: 0 16px;
-		text-align: center;
-		color: #787878;
-		font-size: 16px;	
+	.cd-slider li.current_slide::before {
+		border-width: 16rem;
 	}
-	.aboutContainer::after, .row::after {
-		content: "";
-		clear: both;
-		display: table;
+	.cd-slider li.current_slide .content {
+		opacity: 1;
+		transform: scale(1);
 	}
-	.productContainer {
+	
+	/* navigate the header info*/
+	
+	nav div {
+		position: absolute;
+		top: 50%;
+		left: 4%;
+		width: 5rem;
+		height: 5rem;
+		margin-top: -2.5rem;
+		list-style: none;
+	}
+	nav div:last-of-type {
+		left: auto;
+		right: 4%;
+	}
+	.prev, .next {
 		position: relative;
-		width: 50%;
-	}
-	.productImage {
-		display: block;
+		z-index: 100;
 		width: 100%;
-		height: auto;
+		height: 100%;
+		display: block;
+		border-radius: 100%;
+		transition: box-shadow .3s;
 	}
-	.circleImg {
-		border-radius: 50%;
-		width: 180px;
-		height: 180px;
-		object-fit: cover;
+	.prev::before, .prev::after, .next::before, .next::after {
+		content: '';
+		position: absolute;
+		left: 43%;
+		background: #fff;
+		width: .4rem;
+		min-width: 3px;
+		border-radius: 3px;
+		height: 34%;
+	}
+	.prev::before {
+		transform: rotate(45deg);
+		top: 24%;
+	}
+	.prev::after {
+		transform: rotate(-45deg);
+		bottom: 24%;
+	}
+	.next::before, .next::after {
+		left: auto;
+		right: 43%;
+	}
+	.next::before {
+		transform: rotate(-45deg);
+		top: 24%;
+	}
+	.next::after {
+		transform: rotate(45deg);
+		bottom: 24%;
+	}
+	.prev:hover, .next:hover {
+		box-shadow: 0 0 0 1rem rgba(0, 0, 0, 0.2);
+	}
+	nav > div > span {
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-radius: 100%;
+		z-index: 5;
+		will-change: width, height;
+		transform: translate(-50%, -50%);
+		transition: width .6s, height .6s;
 	}
 	
 	/* break with button to lead to calendar*/
+	
 	.ad {
 		background-image: url("images/sven-scheuermeier.jpg");
 		background-repeat: no-repeat;
@@ -109,7 +233,8 @@
 		background-position: 80% !important;
 	}
 
-
+	/* Display the team in 2 columns */
+	
 	.column2 {
 		float: left;
 		width: 50%;
@@ -126,149 +251,107 @@
 		clear: both;
 		display: table;
 	}
-	.timeline{
-		background-image: url("images/gabby-orcutt.jpg");
-		background-color: black;
-		background-attachment: fixed;
-		font-family: Arial;
+
+
+/* Product information */
+	
+	.products {
+		display: grid;
+		grid-row-gap: 64px;
+		grid-column-gap: 48px;
+		grid-template-columns: repeat(auto-fit,minmax(calc(8px*35),1fr));
+		justify-items: center;
 	}
-	.timeline {
+
+	.products__article {
+		cursor: pointer;
+		display: block;
 		position: relative;
-		margin: 0;
+		text-align: center;
+		line-height: 230px;
+		perspective: 1000px;
+		animation-name: animateIn;
+		animation-duration: .35s;
+		animation-delay: calc(var(--animation-order)*100ms);
+		animation-fill-mode: both;
+		animation-timing-function: ease-in-out;
+	}
+
+	.products__article:before {
+		content: "";
+		position: absolute;
+		top: -16px;
+		left: -16px;
+		border: 2px dashed #67332A;
+		z-index: -1;
+	}
+
+	.products__article,
+	.products__article:before {
+		width: 280px;
+		height: 280px;
+	}
+
+	.products__link {
+		background-color: #fff;
+		border: 2px solid #67332A;
+		display: block;
 		width: 100%;
-	}
-	.timeline::after {
-		content: '';
-		position: absolute;
-		width: 6px;
-		background-color: #FFFFD5;
-		top: 0;
-		bottom: 0;
-		left: 50%;
-		margin-left: -3px;
-	}
-	.timelineContainer {
-		padding: 10px 40px;
-		position: relative;
-		width: 50%;
-	}
-	.timelineContainer::after {
-		content: '';
-		position: absolute;
-		width: 20px;
-		height: 20px;
-		right: -10px;
-		background-color: #ed4337;
-		top: 15px;
-		border-radius: 50%;
-		z-index: 15;
-	}
-	.left {
-		left: 0;
-	}
-	.right {
-		left: 50%;
-	}
-	.left::before {
-		content: " ";
-		height: 0;
-		position: absolute;
-		top: 22px;
-		width: 0;
-		z-index: 1;
-		right: 30px;
-		border: medium solid white;
-		border-width: 10px 0 10px 10px;
-		border-color: transparent transparent transparent white;
-	}
-	.right::before {
-		content: " ";
-		height: 0;
-		position: absolute;
-		top: 22px;
-		width: 0;
-		z-index: 1;
-		left: 30px;
-		border: medium solid white;
-		border-width: 10px 10px 10px 0;
-		border-color: transparent white transparent transparent;
-	}
-	.right::after {
-		left: -10px;
-	}
-	.timelineContent {
-		padding: 10px 20px;
-		background-color: white;
-		position: relative;
-		border-radius: 6px;
-	}
-	.product {
-		float: left;
-		width: 33.3%;
-		margin-bottom: 16px;
-		padding: 15px 20px;
-	}
-	.productOverlay {
-		position: absolute;
-		bottom: 100%;
-		left: 0;
-		right: 0;
-		background-color: black;
-		opacity: 0.8;
-		overflow: hidden;
-		width: 100%;
-		height:0;
-		transition: .5s ease;
-	}
-	.productContainer:hover .productOverlay {
-		bottom: 0;
 		height: 100%;
 	}
-	.productText {
-		font-family: Arial, Helvetica, sans-serif;
-		color: white;
-		font-size: 20px;
+
+	.products__link:after {
 		position: absolute;
 		top: 50%;
-		left: 50%;
-		-webkit-transform: translate(-50%, -50%);
-		-ms-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
-		text-align: center;
+		right: 24px;
+		width: 16px;
+		height: 16px;
+		clip-path: polygon(75% 0,100% 50%,75% 100%,0 100%,25% 50%,0 0);
+		-webkit-clip-path: polygon(75% 0,100% 50%,75% 100%,0 100%,25% 50%,0 0);
+		background-color: #67332A;
+		transition: opacity .5s ease-in,transform .3s ease-in-out 0ms;
 	}
-	
-	/* Navigation bar */
-	
-	#navbar {
-		background-color: white;
-		padding: 10px 40px 30px;
-		transition: 0.4s;
-		position: fixed;
-		width: 100%;
-		z-index: 99; 
-		text-align: center;
+
+	.products__content {
+		background-color: #67332A;
+		background-image: url("images/pip-logo.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding: 16px;
+		display: flex;
+		flex-direction: column;
+		border: 2px solid #67332A;
 	}
-	#navbar a {
-		float: center;
-		color: #787878;
-		text-align: center;
-		padding: 14px;
-		text-decoration: none;
-		font-size: 20px; 
-		border-radius: 4px;
-	}	
-	#navbar #logo {
-		font-size: 35px;
-		font-weight: bold;
-		transition: 0.4s;
+
+	.products__content--lhs {
+		clip-path: polygon(0 0,51% 0,51% 100%,0 100%);
+		-webkit-clip-path: polygon(0 0,51% 0,51% 100%,0 100%);
 	}
-	#navbar a:hover {
-		background-color: #ddd;
-		color: #ed4337;
+
+	.products__content--rhs {
+		clip-path: polygon(50% 0,100% 0,100% 100%,50% 100%);
+		-webkit-clip-path: polygon(50% 0,100% 0,100% 100%,50% 100%);
+		transition: transform .5s ease-in-out,background-color .4s ease-in-out;
 	}
+
+	.products__link:hover .products__content--rhs {
+		background-color: #67332A;
+		transform: rotateY(-30deg);
+	}
+
+	mark {
+		background-color: #fff;
+	}
+
 	
 	footer {
-		background-color: #ed4337;
+		background-color: #67332A;
 		display: block;
 		color: white;
 		text-align: right;
