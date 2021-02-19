@@ -16,7 +16,7 @@ JavaScript
 
 ##Authors
 
-Kira Sanford - Initial work - Notepad++
+Kira Sanford
 
 ##Acknowledgments
 Shout out to everyone involved in the Entreprenuership Summer Program. And special thanks to the teaching team and Professor Matthew Mars at U of A for making the program an amazing experience.
