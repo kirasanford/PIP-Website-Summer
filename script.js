@@ -1,15 +1,12 @@
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-	window.onscroll = function() {scrollFunction()};
-	function scrollFunction() {
+	window.onscroll = function () {
+		const navbar = document.getElementById("navbar");
 		if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-			document.getElementById("navbar").style.padding = "5px 40px 20px";
-			document.getElementById("logo").style.fontSize = "25px";
+			navbar.classList.add("shrink");
+		} else {
+			navbar.classList.remove("shrink");
 		}
-		else {
-			document.getElementById("navbar").style.padding = "10px 40px 30px";
-			document.getElementById("logo").style.fontSize = "25px";
-		}
-	}
+	};
 // Nav smooth scroll
 	$(document).ready(function(){
 	$("a").on('click', function(event) {
