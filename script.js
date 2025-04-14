@@ -7,6 +7,7 @@
 			navbar.classList.remove("shrink");
 		}
 	};
+
 // Nav smooth scroll
 	$(document).ready(function(){
 	$("a").on('click', function(event) {
