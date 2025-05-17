@@ -4,7 +4,6 @@
 	<title>PIP: producing inventory from the peculiar</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
@@ -30,38 +29,50 @@
 			</div>
 		</div>
 	</nav>
-	
-	<div class="main" id="Home">
-	<section class="cd-slider">
-	  <ul>
-		<li data-color="#9F241B">
-		  <div class="content" style="background-image:url(images/anne-preble.jpg)">
-			  <p class="headerText">"Producing Inventory From the Peculiar"</p>
-		  </div>
-		</li>
-		<li data-color="#453B2F">
-		  <div class="content" style="background-image:url(images/problem.jpg)">
-			  <p class="headerText">60 million tons of peculiar produce is sent to landfills annually in the US.</p>
-		  </div>
-		</li>
-		<li data-color="#726D7B">
-		  <div class="content" style="background-image:url(images/olia-gozha.jpg)">
-			<p class="headerText"> PIP turns peculiar, edible items into jams, jellies, salsas, and guacamole.</p>
-		  </div>
-		</li>
-			<li data-color="#1D382A">
-		  <div class="content" style="background-image:url(images/kylie-lugo.jpg">
-			  <p class="headerText">Sign up for a workshop to can and jam your way to less food waste.</p>
-		  </div>
-		</li>
-	  </ul>
-	  <nav>
-		<div><a class="prev" href="#"></a></div>
-		<div><a class="next" href="#"></a></div>
-	  </nav>
-	</section>	<script src="script.js"></script>
+
+	<div id="carousel" class="carousel slide" data-bs-ride="carousel">
+		<!-- Slides -->
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<div class="overlay"></div>
+				<img src="images/anne-preble.jpg" alt="Producing Inventory From the Peculiar">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>Producing Inventory From the Peculiar</h5>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="overlay"></div>
+				<img src="images/problem.jpg" alt="Producing Inventory From the Peculiar">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>60 million tons of peculiar produce is sent to landfills annually in the US.</h5>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="overlay"></div>
+				<img src="images/olia-gozha.jpg" alt="Producing Inventory From the Peculiar">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>PIP turns peculiar, edible items into jams, jellies, salsas, and guacamole.</h5>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="overlay"></div>
+				<img src="images/kylie-lugo.jpg" alt="Producing Inventory From the Peculiar">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>Sign up for a workshop to can and jam your way to less food waste.</h5>
+				</div>
+			</div>
+		</div>
+
+		<!-- Controls -->
+		<button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
 	</div>
-	
 	
 	<div class="main" id="Staff">
 		<h1>Meet the Team</h1>
@@ -205,6 +216,6 @@
 	<footer> <br> </footer>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-
+	<script src="script.js"></script>
 </body>
 </html>
